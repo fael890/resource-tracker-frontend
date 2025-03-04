@@ -1,0 +1,22 @@
+#container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 80px;
+    width: 100vw;
+    border-bottom: 1px black solid;
+    font-size: 18px;
+    background-color: #333333;
+}
+
+#container a{
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+}
+
+#container a:hover{
+    color: #ffa600;
+    
+}
