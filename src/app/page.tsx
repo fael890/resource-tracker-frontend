@@ -1,4 +1,4 @@
-import { ProcessMonitor } from '../components/process_monitor/process_monitor';
+import { ProcessMonitor } from '../components/monitor/monitor';
 
 export default function Home(){
     return (

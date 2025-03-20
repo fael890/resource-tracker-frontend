@@ -1,5 +1,10 @@
 import { Header } from "@/components/header/header";
 import "./globals.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 export const metadata = {
   title: 'Next.js',
@@ -15,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        {children}
+        <Container className="mt-4">
+          {children}
+        </Container>
       </body>
     </html>
   )
