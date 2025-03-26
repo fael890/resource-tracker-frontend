@@ -82,7 +82,7 @@ export function ProcessMonitor() {
                                 ))
                             ) : (
                                 <tr>
-                                    <td colSpan={40}>No processes found</td>
+                                    <td colSpan={12}>No processes found</td>
                                 </tr>
                             )}
                         </tbody>
