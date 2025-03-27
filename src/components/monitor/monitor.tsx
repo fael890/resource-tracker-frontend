@@ -57,6 +57,39 @@ export function ProcessMonitor() {
                     <h3>Verification time: ({timestamp})</h3>
                 </Col>
             </Row>
+            <Row className="justify-content-center text-center mt-6">
+                <Col>
+                    <h3>GPU Usage</h3>
+                </Col>
+            </Row>
+            <Row className="justify-content-center text-center mt-2">
+                <Col>
+                    <Table>
+                        <thead>
+                            <tr>
+                                <th>GPU Usage (%)</th> 
+                                <th>Used Memory (MiB)</th>
+                                <th>Total Memory (MiB)</th>
+                                <th>Temperature</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            { gpuData.gpuUsage !== '' ? (
+                                <tr>
+                                    <td>{gpuData.gpuUsage}</td>
+                                    <td>{gpuData.vramUsage}</td>
+                                    <td>{gpuData.totalVram}</td>
+                                    <td>{gpuData.temperature}</td>
+                                </tr>
+                            ) : (
+                                <tr>
+                                    <td colSpan={40}>No gpu information</td>
+                                </tr>
+                            )}
+                        </tbody>
+                    </Table>
+                </Col>
+            </Row>
             <Row className="justify-content-center text-center mt-2">
                 <Col>
                     <Table>
@@ -85,39 +118,6 @@ export function ProcessMonitor() {
                             ) : (
                                 <tr>
                                     <td colSpan={12}>No processes found</td>
-                                </tr>
-                            )}
-                        </tbody>
-                    </Table>
-                </Col>
-            </Row>
-            <Row className="justify-content-center text-center mt-6">
-                <Col>
-                    <h3>GPU Usage</h3>
-                </Col>
-            </Row>
-            <Row className="justify-content-center text-center mt-2">
-                <Col>
-                    <Table>
-                        <thead>
-                            <tr>
-                                <th>GPU Usage (%)</th> 
-                                <th>Used Memory (MiB)</th>
-                                <th>Total Memory (MiB)</th>
-                                <th>Temperature</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            { gpuData.gpuUsage !== '' ? (
-                                <tr>
-                                    <td>{gpuData.gpuUsage}</td>
-                                    <td>{gpuData.vramUsage}</td>
-                                    <td>{gpuData.totalVram}</td>
-                                    <td>{gpuData.temperature}</td>
-                                </tr>
-                            ) : (
-                                <tr>
-                                    <td colSpan={40}>No gpu information</td>
                                 </tr>
                             )}
                         </tbody>
