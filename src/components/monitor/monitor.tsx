@@ -21,7 +21,9 @@ export function ProcessMonitor() {
     function handleWebSocketMessage(data: any){
         setProcessList(data.processList);
         setGpuUsage(data.gpuMonitor);
-        setTimestamp(data.timestamp);
+
+        let timestamp: Date = new Date(data.timestamp);
+        setTimestamp(timestamp.toLocaleString());
     }
 
     function connect(){
